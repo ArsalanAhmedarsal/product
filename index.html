@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css"
+        media="all" />
+    <link rel="stylesheet" href="range.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main-header-menu.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <title>Listing</title>
+</head>
+
+<body>
+    <div class="container-fluid bg-black">
+        <div class="Top-nav">
+            <div class="info-container">
+                <div class="phone">
+                    <a href="tel:+4733378901">
+                        <i class="fas fa-phone"></i><span>+47 333 78 901</span></a>
+
+                </div>
+                <div class="info">
+                    <a href="mailto:webmaster@example.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@company.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="social-container">
+                <div class="social-icon hide-for-responsive">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid shadow">
+        <!-- <nav class="">
+            <div class="logo">
+                <a href=""> <img src="imgs/logo.png" alt="Logo Image"></a>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Man</a></li>
+                <li><a href="">Kids</a></li>
+                <li><a href="">Jewellery</a></li>
+                <li><a href="">Accessories</a></li>
+
+
+            </ul>
+
+            <div class="nav-icon">
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href=""><i class="fas fa-search"></i></a>
+                
+            </div>
+        </nav> -->
+        <header class="main-header">
+            <!-- <div class="container"> -->
+            <div class="logo">
+                <a href=""> <img src="imgs/logo.png" alt="Logo Image"></a>
+            </div>
+            <!-- <img class="main-header-logo" src="imgs/logo.png"></img> -->
+            <nav class="main-header-menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Man</a></li>
+                    <li><a href="">Kids</a></li>
+                    <li><a href="">Jewellery</a></li>
+                    <li><a href="">Accessories</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon">
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href=""><i class="fas fa-search"></i></a>
+
+            </div>
+
+            <button class="main-header-side-menu-button" onclick="toggleSideMenu(1)">
+                <div class="stripes"></div>
+                <div class="stripes"></div>
+                <div class="stripes"></div>
+                <div class="stripes"></div>
+            </button>
+            <!-- </div> -->
+        </header>
+        <nav class="side-menu">
+            <div class="side-menu-content">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Man</a></li>
+                    <li><a href="">Kids</a></li>
+                    <li><a href="">Jewellery</a></li>
+                    <li><a href="">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="side-menu-close-div"></div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="breadcrume">
+            <ul>
+                <li><a href="">Home
+                        <i class="fas fa-angle-double-right"></i>
+                    </a></li>
+                <li><a href="">Page</a>
+                    <i class="fas fa-angle-double-right"></i>
+                </li>
+                <li><a href="">Shop</a>
+                    <i class="fas fa-angle-double-right"></i>
+                </li>
+                <li><a href="" class="active">Categorey</a></li>
+            </ul>
+        </div>
+
+        <div class="listing-wraper">
+            <div class="sidebar">
+                <div class="catergory">
+                    <h2>Categoaries</h2>
+                    <ul>
+                        <li><a href="">Accessories (15)</a></li>
+                        <li><a href="">Dresses (50)</a></li>
+                        <li><a href="">Women (150)</a></li>
+                        <li><a href="">Men (150)</a></li>
+                        <li><a href="">Watch (150)</a></li>
+                        <li><a href="">Clothing (150)</a></li>
+                        <li><a href="">Bags (150)</a></li>
+                    </ul>
+                </div>
+
+                <div class="price-filter">
+                    <h2>Price Filter</h2>
+
+
+                    <div class="price-range-block">
+
+
+
+                        <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+
+                        <div class="range-botton">
+
+                            <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" id="min_price"
+                                class="price-range-field" />
+                            <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');"
+                                id="max_price" class="price-range-field" />
+                            <button class="price-range-search" id="price-range-submit"> <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+                <!-- <div id="searchResults" class="search-results-block"></div> -->
+
+                <div class="size-button">
+                    <h2>SIZE</h2>
+
+                    <button type="button" class="size-botton-stle">XS</button>
+                    <button type="button" class="size-botton-stle">S</button>
+                    <button type="button" class="size-botton-stle">M</button>
+                    <button type="button" class="size-botton-stle">L</button>
+                    <button type="button" class="size-botton-stle">SL</button>
+                    <button type="button" class="size-botton-stle">XL</button>
+                    <button type="button" class="size-botton-stle">XXL</button>
+                </div>
+
+                <div class="color">
+                    <h2>Color</h2>
+
+                    <form action="/action_page.php">
+
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="Black" name="Black" value="Bike">
+                            <label for="Black"> Black</label>
+                        </div>
+
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="White" name="White" value="Bike">
+                            <label for="White"> White</label>
+                        </div>
+
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="Blue" name="vehiclBluee1" value="Bike">
+                            <label for="Blue"> Blue</label>
+                        </div>
+
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="Yellow" name="Yellow" value="Bike">
+                            <label for="Yellow"> Yellow</label>
+                        </div>
+
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="Red" name="Red" value="Bike">
+                            <label for="Red"> Red</label>
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+                <div class="Top-rated">
+                    <h2>Top Rated</h2>
+
+                    <div class="top-rated-content-wrap">
+                        <div class="top-img">
+                            <img src="imgs/top-rated-img.png" alt="">
+                        </div>
+                        <div class="top-rated-content">
+                            <p>Casuttal men wearing
+                                cool shoe</p>
+                            <h3>$250.00</h3>
+                        </div>
+                    </div>
+
+                    <div class="top-rated-content-wrap">
+                        <div class="top-img">
+                            <img src="imgs/top-rated-img.png" alt="">
+                        </div>
+                        <div class="top-rated-content">
+                            <p>Casuttal men wearing
+                                cool shoe</p>
+                            <h3>$250.00</h3>
+                        </div>
+                    </div>
+
+                    <div class="top-rated-content-wrap">
+                        <div class="top-img">
+                            <img src="imgs/top-rated-img.png" alt="">
+                        </div>
+                        <div class="top-rated-content">
+                            <p>Casuttal men wearing
+                                cool shoe</p>
+                            <h3>$250.00</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sale-img">
+                    <img src="imgs/sale-img.png" alt="">
+                </div>
+            </div>
+            <!------sidebar-end------>
+            <!-------Listing -Start------->
+            <div class="listing">
+
+                <div class="price-filter for-responsive">
+                    <h2>Price Filter</h2>
+
+
+                    <div class="price-range-block">
+
+
+
+                        <div id="slider-range-one" class="price-filter-range" name="rangeInput"></div>
+
+                        <div class="range-botton">
+
+                            <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');"
+                                id="min_price-two" class="price-range-field" />
+                            <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');"
+                                id="max_price-two" class="price-range-field" />
+                            <button class="price-range-search" id="price-range-submit"> <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+
+
+                        <!-- <div id="searchResults" class="search-results-block"></div> -->
+
+                    </div>
+
+                </div>
+
+                <div class="sorting">
+                    <div class="result">
+                        <span>Showing 1–12 of 44 results</span>
+                    </div>
+                    <div class="sort-by">
+                        <select name="pets" id="pet-select">
+                            <option value="">Sort by newness</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prouct-img">
+                        <img src="imgs/prodcut-img.png" alt="">
+                    </div>
+                    <div class="product-details">
+
+                        <div class="product-name">
+                            <h1>Treatise on the</h1>
+                        </div>
+
+                        <div class="product-price">
+                            <span>$250.00</span>
+                        </div>
+
+                        <div class="porduct-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <div class="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+
+                        <div class="product-tags">
+                            <span>Shoes, T-Shirt teen</span>
+                        </div>
+
+                        <div class="products-buttons">
+                            <button>
+                                <i class="fas fa-shopping-cart"></i>
+                                ADD TO CART
+                            </button>
+
+                            <button>
+                                <i class="far fa-heart"></i>
+
+                            </button>
+
+                            <button>
+                                <i class="fas fa-expand-arrows-alt"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="prouct-img">
+                        <img src="imgs/prodcut-img.png" alt="">
+                    </div>
+                    <div class="product-details">
+
+                        <div class="product-name">
+                            <h1>Treatise on the</h1>
+                        </div>
+
+                        <div class="product-price">
+                            <span>$250.00</span>
+                        </div>
+
+                        <div class="porduct-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <div class="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+
+                        <div class="product-tags">
+                            <span>Shoes, T-Shirt teen</span>
+                        </div>
+
+                        <div class="products-buttons">
+                            <button>
+                                <i class="fas fa-shopping-cart"></i>
+                                ADD TO CART
+                            </button>
+
+                            <button>
+                                <i class="far fa-heart"></i>
+
+                            </button>
+
+                            <button>
+                                <i class="fas fa-expand-arrows-alt"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="prouct-img">
+                        <img src="imgs/prodcut-img.png" alt="">
+                    </div>
+                    <div class="product-details">
+
+                        <div class="product-name">
+                            <h1>Treatise on the</h1>
+                        </div>
+
+                        <div class="product-price">
+                            <span>$250.00</span>
+                        </div>
+
+                        <div class="porduct-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <div class="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+
+                        <div class="product-tags">
+                            <span>Shoes, T-Shirt teen</span>
+                        </div>
+
+                        <div class="products-buttons">
+                            <button>
+                                <i class="fas fa-shopping-cart"></i>
+                                ADD TO CART
+                            </button>
+
+                            <button>
+                                <i class="far fa-heart"></i>
+
+                            </button>
+
+                            <button>
+                                <i class="fas fa-expand-arrows-alt"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="prouct-img">
+                        <img src="imgs/prodcut-img.png" alt="">
+                    </div>
+                    <div class="product-details">
+
+                        <div class="product-name">
+                            <h1>Treatise on the</h1>
+                        </div>
+
+                        <div class="product-price">
+                            <span>$250.00</span>
+                        </div>
+
+                        <div class="porduct-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <div class="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+
+                        <div class="product-tags">
+                            <span>Shoes, T-Shirt teen</span>
+                        </div>
+
+                        <div class="products-buttons">
+                            <button>
+                                <i class="fas fa-shopping-cart"></i>
+                                ADD TO CART
+                            </button>
+
+                            <button>
+                                <i class="far fa-heart"></i>
+
+                            </button>
+
+                            <button>
+                                <i class="fas fa-expand-arrows-alt"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="prouct-img">
+                        <img src="imgs/prodcut-img.png" alt="">
+                    </div>
+                    <div class="product-details">
+
+                        <div class="product-name">
+                            <h1>Treatise on the</h1>
+                        </div>
+
+                        <div class="product-price">
+                            <span>$250.00</span>
+                        </div>
+
+                        <div class="porduct-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                        <div class="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+
+                        <div class="product-tags">
+                            <span>Shoes, T-Shirt teen</span>
+                        </div>
+
+                        <div class="products-buttons">
+                            <button>
+                                <i class="fas fa-shopping-cart"></i>
+                                ADD TO CART
+                            </button>
+
+                            <button>
+                                <i class="far fa-heart"></i>
+
+                            </button>
+
+                            <button>
+                                <i class="fas fa-expand-arrows-alt"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <div class="pagniation-wraper">
+                        <ul>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">...</a></li>
+                            <li><a href=""> <i class="fas fa-chevron-right"></i></a></li>
+                            <li><a href=""> <i class="fas fa-angle-double-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="footer-top-wraper">
+        <div class="container-fluid border">
+            <div class="container">
+                <div class="footer-top">
+                    <span>We’re confident we’ve provided all the best for you. Stay connect with us</span>
+                    <div class="social-icon footer-social-icons">
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href=""><i class="fab fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-footer">
+            <div class="footer-col">
+                <div class="footer-heading">
+                    <h2>Information</h2>
+                </div>
+                <ul>
+                    <li><a href="">Delivery Information</a></li>
+                    <li><a href="">Discount</a></li>
+                    <li><a href="">Sitemap</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">My Account</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-heading">
+                    <h2>My account</h2>
+                </div>
+                <ul>
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">View Cart</a></li>
+                    <li><a href="">My Wishlist</a></li>
+                    <li><a href="">Check out</a></li>
+                    <li><a href="">Track My Order</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-heading">
+                    <h2>Help</h2>
+                </div>
+                <ul>
+                    <li><a href="">F.A.Q.</a></li>
+                    <li><a href="">Shipping
+                        </a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-heading">
+                    <h2>Contact Info</h2>
+                </div>
+                <ul>
+                    <li> <a href="">
+                            <i class="fas fa-globe-asia"></i>
+                            <span>234 Your Address, Country.</span>
+                        </a></li>
+                    <li><a href="tel:+4733378901"><i class="fas fa-phone"></i><span>+47 333 78 901</span></a></li>
+
+                    <li><a href="mailto:webmaster@example.com"><i
+                                class="fas fa-envelope"></i><span>info@company.com</span></a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom-wraper">
+        <div class="container-fluid bg-black">
+            <div class="container">
+                <div class="footer-bottom ">
+                    <div class="footer-botttom-content">
+                        <p>Copyright 2017 RenoshopBee all right reserved - Design by BeeStudios</p>
+                    </div>
+                    <div class="footer-bottom-icons">
+                        <ul class="">
+                            <li><a href=""><i class="fab fa-cc-visa" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fab fa-cc-stripe" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fab fa-cc-paypal" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fab fa-cc-mastercard" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fab fa-cc-apple-pay" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fab fa-cc-amazon-pay" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/971054301e.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        type="text/javascript"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
